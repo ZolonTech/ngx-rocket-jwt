@@ -13,7 +13,7 @@ import { Driver } from 'selenium-webdriver/safari';
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
-  var title = document.getElementsByClassName("title");
+  let title = document.getElementsByClassName('title');
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -41,6 +41,6 @@ describe('HomeComponent', () => {
     expect(component).toBeTruthy();
   });
   it('should have an h1 title "Find an SSA Office"', () => {
-    expect(document.getElementsByClassName("title")).toEqual(title);
+    expect(document.getElementsByClassName('title')).toEqual(title);
   });
 });

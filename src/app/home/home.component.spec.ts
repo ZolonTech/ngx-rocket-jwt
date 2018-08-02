@@ -13,7 +13,7 @@ import { Driver } from 'selenium-webdriver/safari';
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
-  let title = document.getElementsByClassName('title');
+  const title = document.getElementsByClassName('title');
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({

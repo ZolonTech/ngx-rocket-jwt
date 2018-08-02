@@ -20,7 +20,7 @@ export class UploadService {
             profession: 'Sofware Engineer',
             department: 'IT'
         }
-    ]
+    ];
 
     constructor(private httpClient: HttpClient) { }
 
@@ -30,7 +30,7 @@ export class UploadService {
             observer.next(this.offices);
             observer.complete();
         });
-    }   
+    }
 
 //   getOfficesByZip(zip: string): Observable<any> {
 //     return this.httpClient

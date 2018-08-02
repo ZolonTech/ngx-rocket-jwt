@@ -1,7 +1,7 @@
 <app-loader [isLoading]="isLoading" size="1.5"></app-loader>
 <div class="search" [hidden]="isLoading">
     <!-- <img class="logo" src="assets/logo.svg" alt="Logo Image"> -->
-    <h1 class="title">Find a Social Security Office</h1>
+    <h1 class="title">Find a SSO</h1>
     <mat-form-field class="input-field">
         <input matInput class="input" [(ngModel)]="zipCode" (keydown.enter)="submit()">
         <mat-placeholder class="placeholder">Search By Zipcode</mat-placeholder>

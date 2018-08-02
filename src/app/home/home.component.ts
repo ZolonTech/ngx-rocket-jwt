@@ -7,17 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  results: any;
-  isLoading: boolean;
+  // offices: OfficeLocation[] = [];
+  // office: OfficeLocation = null;
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit() {
-    this.isLoading = true;
-    setTimeout(() => {
-      this.results = 'Finished loading...';
-      this.isLoading = false;
-    }, 1000);
   }
+
+  // handleSearchData($event: OfficeLocation[]): void {
+  //   this.offices = $event;
+  //   if (this.offices.length === 1) {
+  //     this.office = this.offices[0];
+  //   }
+  // }
 
 }

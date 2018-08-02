@@ -1,14 +1,19 @@
 <div class="container">
   <mat-card class="mat-card-invisible">
-    <p>
-      <img class="logo" src="assets/ngx-rocket-logo.png" alt="angular logo"/>
-    </p>
     <mat-card-content>
-      <mat-card-title translate>Hello world !</mat-card-title>
-      <mat-card-subtitle>
-        <app-loader [isLoading]="isLoading" size="1.5"></app-loader>
-        <q [hidden]="isLoading">{{results}}</q>
-      </mat-card-subtitle>
+      <mat-grid-list cols="4" rowHeight="200px">
+        <mat-grid-tile colspan="1" rowspan="2">
+          <app-search (searchEmitter)="handleSearchData($event)"></app-search>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="3" rowspan="4">
+            Details Component Placeholder
+          <!-- <app-map [locations]="offices"></app-map> -->
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="3">
+            Map Component Placeholder
+          <!-- <app-details *ngIf="office" [office]="office"></app-details> -->
+        </mat-grid-tile>
+      </mat-grid-list>
     </mat-card-content>
   </mat-card>
 </div>

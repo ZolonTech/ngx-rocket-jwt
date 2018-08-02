@@ -4,18 +4,25 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MaterialModule } from '@app/material.module';
 import { LoaderComponent } from './loader/loader.component';
+import { SearchComponent } from '@app/shared/search/search.component';
+
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   imports: [
     FlexLayoutModule,
     MaterialModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   declarations: [
-    LoaderComponent
+    LoaderComponent,
+    SearchComponent
   ],
   exports: [
-    LoaderComponent
+    LoaderComponent,
+    SearchComponent
   ]
 })
 export class SharedModule { }

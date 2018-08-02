@@ -7,10 +7,13 @@ import { CoreModule } from '@app/core';
 import { SharedModule } from '@app/shared';
 import { MaterialModule } from '@app/material.module';
 import { HomeComponent } from './home.component';
+import { by } from 'protractor';
+import { Driver } from 'selenium-webdriver/safari';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
+  var title = document.getElementsByClassName("title");
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -36,5 +39,8 @@ describe('HomeComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it('should have an h1 title "Find an SSA Office"', () => {
+    expect(document.getElementsByClassName("title")).toEqual(title);
   });
 });

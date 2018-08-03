@@ -9,7 +9,7 @@ pipeline {
 		    branch 'development'
 		  }
 		  steps {
-		    echo 'Deploy Production'
+		    echo 'Deploy Development'
 		    sh 'npm install'
 		    sh 'npm run build'
 		    sh 'aws s3 cp dist $DEVELOPMENT_S3_BUCKET --recursive --acl public-read'
@@ -33,7 +33,7 @@ pipeline {
 		    branch 'master'
 		  }
 		  steps {
-		    echo 'Deploy Development'
+		    echo 'Deploy Production'
 		    sh 'npm install'
 		    sh 'npm run build'
 		    sh 'aws s3 cp dist $PRODUCTION_S3_BUCKET --recursive --acl public-read'
